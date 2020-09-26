@@ -1,0 +1,21 @@
+{
+  "name": "server-side-rendering-with-create-react-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-scripts": "1.0.17"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:ssr": "node ./server/",
+    "build": "react-scripts build && npm run ssr",
+    "ssr": "cross-env NODE_ENV=production webpack --config ./webpack.ssr.config.js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.1"
+  }
+}
